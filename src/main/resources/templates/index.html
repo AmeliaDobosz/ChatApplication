@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:opacity="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Chat Application</title>
     <link rel="stylesheet" type="text/css"  th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+    <link th:href="@{/index.css}" rel="stylesheet"/>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -13,23 +14,46 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <nav class="navbar navbar-dark bg-primary">
-                <!-- Navbar content -->
-                <div class="container">
-                    <a class="navbar-brand" href="#">Navbar</a>
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+                <a class="navbar-brand" href="#">ChatApplication</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Lista kanałów<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Lista dostępnych użytkowników</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Zgoszenia do admina</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/sing_up}">Register</a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
-            <div class="jumbotron">
-                <h2>
-                    Aplikacja Amelii Dobosz
-                </h2>
-                <p>
-                    Aplikacja powstaje ..........
-                </p>
-                <p>
-                    <button type="button" class="btn btn-dark">Dark</button>
-                </p>
+
+            <div class="text">
+                <div class="irc"></div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tortor nisi, pharetra eget tempus id, iaculis ac felis. Fusce iaculis convallis scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis sapien non pulvinar vulputate. Praesent ultrices, tellus sit amet interdum cursus, quam odio dignissim metus, eget fringilla enim sem ut nisl. Curabitur lorem nisi, maximus ac blandit eget, efficitur at massa. Vestibulum accumsan sem sit amet tortor tincidunt placerat sed eu metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras imperdiet, neque eget dictum tristique, lectus eros porta libero, eget varius mi metus eu lacus. Aenean efficitur, justo et pulvinar consequat, velit ante vestibulum est, eu eleifend neque libero sit amet neque.
+
+                Fusce porttitor enim mauris, et volutpat diam sollicitudin in. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacus ex, congue a aliquet sit amet, tristique sed orci. In vehicula, urna nec ultricies pharetra, erat nisi fermentum mi, ornare lobortis est lectus eu mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus blandit tincidunt elit, in volutpat metus dictum in. Cras blandit venenatis massa nec porta. In pretium dolor et tristique mollis. Nam tempus nulla sed orci auctor, eget feugiat tortor feugiat. Aliquam aliquam imperdiet semper. Donec placerat dui id ante pulvinar, vel imperdiet elit mattis. Pellentesque id sapien odio. Praesent condimentum urna a convallis rutrum.
             </div>
+
+<!--            <div class="bg-image"-->
+<!--                 style="background-image: url(https://www.brutman.com/mTCP/screenshots/ircjr_2011-05-20.gif);-->
+<!--            height: 100%; width: 100%; opacity: 0.2" >-->
+<!--                <div class="text-center" style="opacity: 100">Cześć</div>-->
+<!--            </div>-->
         </div>
     </div>
     <div class="row">
